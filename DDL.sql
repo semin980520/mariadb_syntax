@@ -25,10 +25,10 @@ show tables;
 -- asql문은 대문자관례이고, 시스템에서 대소문자를 구문하지는 않음
 -- 테이블명/컬럼명 등은 소문자가 관례이고, 대소문자가 차이가 있음
 
--- 테이블생성
+-- 테이블생성 (primary ket : 유니크하고 unll 불가)
 create table author(id int primary key, name varchar(255), email varchar(255), password varchar(255));
 
--- 테이블 컬럼정보 조회
+-- 테이블 컬럼정보 조회( desc 만 타이핑해도 가능 )
 describe author;
 
 -- 테이블 데이터 전체 조회
@@ -70,7 +70,7 @@ alter table post modify column tutle varchar(255) not null;
 alter table post change column content contents varchar(3000);
 
 -- 테이블 삭제
-drop table abc;
+drop table table명;
 
 -- 일련의 쿼리를 실행시킬때 특정 쿼리에서 에러가 나지 않도록 if exists를 많이 사용한다
-drop table if exists abc;
+drop table if exists table명;

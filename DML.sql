@@ -22,7 +22,7 @@ select * from author where name='홍길동';
 select * from author where id >2 and name='hongildong';
 select * from author where id in (1,3,5);
 -- 이름 '홍길동' 인 글쓴이가 쓴 글 목록을 조회하시오
-select * from post where id in(select id from author where name='홍길동');
+select * from post where authot_id in(select id from author where name='홍길동');
 
 -- trucate table post;  : 복구x 전체 삭제
 
@@ -51,3 +51,4 @@ select * from author where password is null;
 select * from author where password is not null;
 
 -- 프로그레머스 sql 문제풀이
+--
