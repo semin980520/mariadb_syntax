@@ -23,4 +23,4 @@ alter table post add constraint  post_fk foreign key(author_id) references autho
 2. 새로운 fk 추가(on update / on delete 변경)
 3. 새로운 fk에 맞는 테스트 
 4. 삭제 테스트
-5. 수정 테스트
+5. 수정 테스트 
