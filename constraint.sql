@@ -24,3 +24,13 @@ alter table post add constraint  post_fk foreign key(author_id) references autho
 3. 새로운 fk에 맞는 테스트 
 4. 삭제 테스트
 5. 수정 테스트 
+
+-- default 옵션
+-- 어떤 column이든 default 지정이 가능하짐나, 일반적으로 enum타입 및 현재시간에서 많이 사용
+alter table author modify column name varchar(255) default 'anonymous';
+-- auto_increment : 숫자값을 입력 안했을때, 마지막에 입력된 가장 큰 값에 +1만큼 자동으로 증가된 숫자값 적용
+alter table author modify column id bigint auto_increment;
+alter table post modify column id bigint auto_increment;
+
+-- uuid 타입
+alter table post add column user_id char(36) default (uuid());
