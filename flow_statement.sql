@@ -20,7 +20,8 @@ case
 when freezer_yn is null then 'N'
 else freezer_yn
 end as freenzr_yn
-from food_warehouse where address like '경기%';
+from food_warehouse where address like '경기%'
+;
 
 
 3.SELECT PT_NAME, PT_NO,	GEND_CD,	AGE,
@@ -30,4 +31,9 @@ else tlno
 end as tlno
 from patient where age <= 12 and gend_cd='W'
 order by age desc, PT_NAME;     
+
+
+
+
+
 -- asc를 안써도 괜찮지면 column명은 써야함 order by 는 항상 문장 제일 뒤에
