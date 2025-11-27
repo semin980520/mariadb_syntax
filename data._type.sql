@@ -93,3 +93,6 @@ select * from post where created_time like '2025-11%';
 
 -- 실습 : 2025년 11월1일부터 11월19일까지의 데이터를 조회  년월일 뒤에 00:00:00 이 자동으로 붙음 
 select * from post where created_time >= '2025-11-01' and created_time < '2025-11-20';
+
+
+ 
